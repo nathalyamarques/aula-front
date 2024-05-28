@@ -4,18 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
-
     <script>
         var nome = "Nathalya"; //texto ou string
         var idade = 23; //number integer
         var peso = 43.2 //number float
         var acordado = true; //boolean
+       // alert("Olá " + nome + "!"); //função básica
+        //E -> P -> S
+        //IO
 
-        alert("Olá " + nome + "!");
+        function exibir()
+        {
+            var nome = prompt("Digite seu nome");
+            console.log("Oi "+ nome +"!");
+        }
+
+        function soma()
+        {
+            var a = prompt("Digite primeiro numero");
+            var b = prompt("Digite outro numero");
+
+            var resultado = parseInt(a) + parseInt(b);
+            console.log(resultado);
+        }
+
+        function adulto()
+        {
+            var idade = prompt("Qual sua idade");
+            if(idade < 13) {
+                console.log("criança")
+            } else if(idade > 60) {
+                console.log("idoso")
+            } else {
+                console.log("adulto")
+            }
+        }
+
+        function maior()
+        {
+            var a = prompt("Digite primeiro numero");
+            var b = prompt("Digite segundo numero");
+
+            if(a > b)
+            {
+                console.log("o valor " + a + " é maior");
+            } else {
+                console.log("o valor " + b + " é menor");
+            }
+        }
+
+        function maiorr()
+        {
+            var a = prompt("Digite primeiro numero");
+            var b = prompt("Digite segundo numero");
+            var c = prompt("Digite terceiro numero")
+
+            if(a > b)
+            {
+                console.log("o valor " + a + " é maior");
+            } if(a > c) {
+                console.log("o valor " + a + " é menor");
+            }else {
+                console("!")
+            }
+            
+        }
+
 
     </script>
 </head>
 <body>
     <h1>Javascript</h1>
+    <button onclick="exibir()">Abrir</button> 
+    <button onclick="soma()">Somar 2 numeros</button>
+    <button onclick="adulto()">Idade</button>
+    <button onclick="maior()">numero maior</button>
+    <button onclick="maiorr()">comparaçãop</button>
 </body>
 </html>
