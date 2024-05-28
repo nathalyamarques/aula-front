@@ -31,7 +31,7 @@
         function adulto()
         {
             var idade = prompt("Qual sua idade");
-            if(idade < 13) {
+            if(idade < 18) {
                 console.log("criança")
             } else if(idade > 60) {
                 console.log("idoso")
@@ -55,19 +55,28 @@
 
         function maiorr()
         {
-            var a = prompt("Digite primeiro numero");
-            var b = prompt("Digite segundo numero");
-            var c = prompt("Digite terceiro numero")
+            var a = parseInt(prompt("Digite primeiro numero"));
+            var b = parseInt(prompt("Digite segundo numero"));
+            var c = parseInt(prompt("Digite terceiro numero"));
 
-            if(a > b)
-            {
-                console.log("o valor " + a + " é maior");
-            } if(a > c) {
-                console.log("o valor " + a + " é menor");
-            }else {
-                console("!")
-            }
-            
+            if((a > b) && (b > c)){
+                console.log("o maior é  " + a + " e o menor é o " + c);
+            } 
+            else if((a > c) && (c > b)){
+                console.log("o maior é  " + a + " e o menor é o " + b);
+            } 
+            else if((b > c) && (c > a)){
+                console.log("o maior é  " + b + " e o menor é o " + a);
+            } 
+            else if((b > a) && (a > c)){
+                console.log("o maior é  " + b + " e o menor é o " + c);
+            } 
+            else if((c > b) && (b > a)){
+                console.log("o maior é  " + c + " e o menor é o " + a);
+            } 
+            else if((c > a) && (a > b)){
+                console.log("o maior é  " + c + " e o menor é o " + b);
+            } 
         }
 
 
@@ -79,6 +88,6 @@
     <button onclick="soma()">Somar 2 numeros</button>
     <button onclick="adulto()">Idade</button>
     <button onclick="maior()">numero maior</button>
-    <button onclick="maiorr()">comparaçãop</button>
+    <button onclick="maiorr()">comparação</button>
 </body>
 </html>
