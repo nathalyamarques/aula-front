@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de lógica</title>
+
+
+    <script>
+        //função para verificar se é vogal ou consoante
+        function parImpar() {
+            let x = 1;
+            while(x <= 50) {
+                if(x % 2 == 0){
+                    console.log(x + " é par");
+                }
+                else{
+                    console.log(x + " é impar");
+                }
+                x++;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input id="valor" type="text">
+    <button onclick="parImpar()">Par Ou Impar</button>
+</body>
+</html>
