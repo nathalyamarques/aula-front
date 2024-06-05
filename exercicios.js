@@ -85,7 +85,33 @@ function ex89() {
 
 function ex97() {
     var notas = [];
-    var alunos = ["Ana", 
+    var alunos = [
+      "Ana", 
+      "Pedro", 
+      "Paulo", 
+      "João", 
+      "Maria", 
+      "Luiza",
+      "Daniele", 
+      "Marcos", 
+      "Michele", 
+      "Leandro"
+  ];
+
+    for(var i = 0; i < 10; i++){
+        var valor = prompt("Digite uma nota: "+ alunos[i]);
+        notas.push(valor);
+    }
+
+    var maiorNota = Math.max(...notas);
+    console.log(notas)
+    resposta.innerHTML= "A maior nota é: " + maiorNota;
+}
+
+function ex97alt() {
+  var notas = [];
+  var alunos = [
+    "Ana", 
     "Pedro", 
     "Paulo", 
     "João", 
@@ -94,13 +120,24 @@ function ex97() {
     "Daniele", 
     "Marcos", 
     "Michele", 
-    "Leandro"];
+    "Leandro"
+];
 
-    for(var i = 0; i < 10; i += 1){
-        var valor = prompt("Digite uma nota: "+ alunos[i]);
-        notas.push(valor);
+  for(var i = 0; i < 10; i++){
+    var soma = 0;
+    for(var j = 0; j < 4; j++){
+      var valor = parseInt(prompt("Digite a "+ (j+1) + "ª nota da(o) "+ alunos[i]));
+      soma = soma + valor;
     }
-    
-    console.log(notas)
-    resposta.innerHTML
+      notas.push(soma/4);
+  }
+  var cont = 0;
+  for(var i=0; i < 10; i++){
+    if(notas[i] >= 7){
+      cont++;
+      console.log(alunos[i] + " Passou, media: "+ notas[i]);
+    }
+  }
+
+  console.log("Passaram " + cont + " alunos");
 }
